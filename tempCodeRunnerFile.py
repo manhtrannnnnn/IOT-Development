@@ -40,11 +40,13 @@ while True:
         ai_result = image_detector()
         print("AI Ouput: ", ai_result)
         client.publish("ai",ai_result)
-    if counter <= 0:
-        counter = 10
-        humi = random.randint(40,80)
-        client.publish("cambien2", humi)
-        lux = random.randint(0,500)
-        client.publish("cambien3", lux)
+    # if counter <= 0:
+    #     counter = 10
+    #     temp = random.randint(10,40)
+    #     client.publish("cambien1", temp)
+    #     humi = random.randint(40,80)
+    #     client.publish("cambien2", humi)
+    #     lux = random.randint(0,500)
+    #     client.publish("cambien3", lux)
     readSerial(client)
     time.sleep(1)
